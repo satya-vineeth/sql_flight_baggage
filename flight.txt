@@ -1,0 +1,15 @@
+select F.FLIGHT_ID AS Flight_ID,
+
+count(b.PASSENGER ID) AS total Passengers,
+
+sum(b.BAGGAGE) AS Total_Baggage
+
+from flight f
+
+join boardingpass b on f.FLIGHT_ID=b.Flight_ID
+
+where f.ARRIVAL DATE='2024-02-11'
+
+AND f.FLIGHT_ID = 'Paris'
+
+group by f.FLIGHT_ID;
